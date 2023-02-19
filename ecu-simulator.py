@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 from __future__ import print_function
 
@@ -76,10 +77,29 @@ def service1(bus, msg):
 
 
 def receive_all():
-
-    bus = can.interface.Bus(bustype='socketcan',channel='can0')
-    #bus = can.interface.Bus(bustype='ixxat', channel=0, bitrate=250000)
-    #bus = can.interface.Bus(bustype='vector', app_name='CANalyzer', channel=0, bitrate=250000)
+    #bus = can.interface.Bus(bustype="kvaser", channel=0)
+    #bus = can.interface.Bus(bustype="socketcan", channel='can0')
+    #bus = can.interface.Bus(bustype="serial", channel=0, port=3)
+    #bus = can.interface.Bus(bustype="pcan")
+    #bus = can.interface.Bus(bustype="usb2can")
+    #bus = can.interface.Bus(bustype="ixxat", channel=0, bitrate=250000)
+    #bus = can.interface.Bus(bustype="nican", channel=0)
+    #bus = can.interface.Bus(bustype="iscan", channel=0)
+    bus = can.interface.Bus(bustype="virtual")
+    #bus = can.interface.Bus(bustype="udp_multicast")
+    #bus = can.interface.Bus(bustype="neovi", channel=0)
+    #bus = can.interface.Bus(bustype="vector", app_name='CANalyzer', channel=0, bitrate=250000)
+    #bus = can.interface.Bus(bustype="slcan", channel=0, port=5)
+    #bus = can.interface.Bus(bustype="robotell", channel=0, port=4)
+    #bus = can.interface.Bus(bustype="canalystii", bitrate=250000)
+    #bus = can.interface.Bus(bustype="systec", channel=0)
+    #bus = can.interface.Bus(bustype="seeedstudio", channel=0, port=3)
+    ##bus = can.interface.Bus(bustype="cantact", channel=0)
+    #bus = can.interface.Bus(bustype="gs_usb", channel=0, bitrate=250000)
+    #bus = can.interface.Bus(bustype="nixnet")
+    #bus = can.interface.Bus(bustype="neousys", channel=0)
+    #bus = can.interface.Bus(bustype="etas")
+    #bus = can.interface.Bus(bustype="socketcand", channel=0, port=35000, host="192.168.0.10")
 
     #bus.state = BusState.ACTIVE
     #bus.state = BusState.PASSIVE
@@ -98,7 +118,7 @@ def receive_all():
         pass
 
 def usage():
-    # DOTO: implement
+    # TODO: implement
     pass
 
 def main():

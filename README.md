@@ -21,9 +21,15 @@ sudo apt update
 sudo apt install python3 python3-pip
 ```
 
-  * Install Python CAN module
+  * Install venv Python
 ```
-sudo pip3 install python-can
+python3 -m venv ./venv
+source ./venv/bin/activate
+```
+
+  * Install requirements
+```
+pip3 install -r ./requirements.txt
 ```
 
   * Download simulator software
